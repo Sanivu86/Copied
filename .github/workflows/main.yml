@@ -9,6 +9,8 @@ jobs:
      # - name: Setup npm package
       #  run: npm init -y && npm install
       - name: Cypress.io
+        env:
+          CI: false
         uses: cypress-io/github-action@v2
         with:
               build: npm run build
