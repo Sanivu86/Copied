@@ -4,3 +4,4 @@ describe('The Home Page', () => {
       cy.visit('/') // baseUrl added in Cypress.json
     })
   })
+  //testi
