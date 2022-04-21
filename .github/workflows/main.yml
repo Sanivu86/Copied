@@ -11,3 +11,14 @@ jobs:
         with:
               build: npm run build
               start: npm start
+  messageSlack:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Notification Slack
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: ci
+        SLACK_TITLE: Post Title
+        SLACK_USERNAME: BotCI
+        SLACK_WEBHOOK: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_MESSAGE: "Testing has been completed"
