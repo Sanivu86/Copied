@@ -18,5 +18,6 @@ jobs:
       uses: slackapi/slack-github-action@v1.18.0
       with:
         channel-id: C03CJCMKW1J
+        slack-token: xoxb-3339184085046-3415758214182-zgoHT95IXMeASQ6PF1gI3pkP
         slack-message: "Testing the shit out"
         
