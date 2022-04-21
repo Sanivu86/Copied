@@ -17,6 +17,6 @@ jobs:
     - name: slack-send
       uses: slackapi/slack-github-action@v1.18.0
       with:
-        channel-id: 03CJCMKW1J
+        channel-id: C03CJCMKW1J
         slack-message: "Testing the shit out"
         
