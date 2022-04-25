@@ -5,7 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.0.1  
+        uses: actions/checkout@v3.0.1
+      - name: Custom tests
+        uses: cypress-io/github-action@v1
+        with:
+            command: npm run dev
       - name: Cypress.io
         uses: cypress-io/github-action@v2.9.7
         with:
@@ -19,5 +23,5 @@ jobs:
       with:
         message: "Testing the shit out"
         slack-token: ${{ secrets.SLACK_BOT_TOKEN }}
-        channel: C03CJCMKW1J
+        channel: ${{ secrets.CHANNEL_ID }}
         
