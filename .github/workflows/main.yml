@@ -14,10 +14,10 @@ jobs:
   messageSlack:
     runs-on: ubuntu-latest
     steps:
-    - name: slack-send
-      uses: slackapi/slack-github-action@v1.18.0
+    - name: Slack Messenger
+      uses: joshmgross/send-slack-message@v1.0.1
       with:
-        channel-id: C03CJCMKW1J
-        slack-token: xoxb-3339184085046-3415758214182-zgoHT95IXMeASQ6PF1gI3pkP
-        slack-message: "Testing the shit out"
+        message: "Testing the shit out"
+        slack-token: ${{ secrets.SLACK_BOT_TOKEN }}
+        channel: C03CJCMKW1J
         
