@@ -6,22 +6,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.0.1
-      - name: Custom tests
-        uses: cypress-io/github-action@v1
-        with:
-            command: npm run dev
       - name: Cypress.io
         uses: cypress-io/github-action@v2.9.7
         with:
               build: npm run build
-              start: npm start
+              start: npm run api, npm run web
   messageSlack:
     runs-on: ubuntu-latest
     steps:
     - name: Slack Messenger
       uses: joshmgross/send-slack-message@v1.0.1
       with:
-        message: "Testing the shit out"
+        message: "Someone pushed some code"
         slack-token: ${{ secrets.SLACK_BOT_TOKEN }}
         channel: ${{ secrets.CHANNEL_ID }}
         
