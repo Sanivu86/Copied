@@ -1,32 +1,33 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-//import MenuIcon from '@mui/icons-material/Menu';
+import React from 'react';
+import {Link} from 'react-router-dom';
+import Page from './Page';
+import Sanna from './Sanna';
 
-export default function ButtonAppBar() {
+function AppBar() {
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
+    <ul>
+      <li> <Link to="/"> Home </Link> </li>
+      <li> <Link to="/page"> Test page </Link> </li>
+    </ul>
+    // <div>
+    //    <a
+    //   className="App-link"
+    //   href="/"
+    //   rel="noopener noreferrer"
+    // >
+    //     Home
+    //   </a>
+    //   <br></br>
+    //   <a
+    //     className="App-link"
+    //     href="/sanna"
+    //     target="_blank" 
+    //   >
+    //     Test page
+    //   </a>
+    //   </div>
+
+  );  
 }
+export default AppBar;
