@@ -1,7 +1,7 @@
 describe('Testing', () => {
     it('Contains Sanna', () => {
       cy.visit('/')
-      cy.contains("Sanna")
+      cy.contains("Test")
 
     })
 
