@@ -2,7 +2,7 @@ name: Cypress tests
 on: [push]
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3.0.1
@@ -13,7 +13,7 @@ jobs:
               start: npm run dev, npm start 
               wait-on: 'http://localhost:5000/api, http://localhost:3000'
   messageSlack:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: Slack Messenger
       uses: joshmgross/send-slack-message@v1.0.1
